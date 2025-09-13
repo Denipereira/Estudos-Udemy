@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swicth</title>
+</head>
+
+<body>
+
+    <!-- <select name="tema" id="Select">
+        <option value="padrao">Padrão</option>
+        <option value="Vermelho">Vermelho</option>
+        <option value="Azul">Azul</option>
+        <option value="Laranja">Laranja</option>
+    </select>
+    <div id="teste">
+
+    </div> -->
+
+    <label for="">Informe a nota do Aluno</label>
+    <input type="number" name="nota" id="Nota" max="10">
+
+    <label for="">Informe a frequnência do aluno</label>
+    <input type="number" name="presenca" id="Presenca" max="100">
+
+    <button onclick="Consultar()" >Consultar</button>
+
+    <h1 id="Resultado">
+        Preencha as informações para consultar
+    </h1>
+
+
+    <!-- <script>
+        // var select = document.getElementById('select').value
+        var select = document.getElementById('Select');
+
+
+        var texto = document.getElementById('teste');
+        var body = document.body;
+
+        select.addEventListener('change', () => {
+            var valorSelecionado = select.value;
+
+
+            switch (valorSelecionado) {
+                case "padrao":
+                    body.style.backgroundColor = "white";
+                    texto.innerText = 'Branco'
+                    break;
+
+                case "Vermelho":
+                    body.style.backgroundColor = "red";
+                    texto.innerText = 'Vermelho'
+                    break;
+
+                case "Azul":
+                    body.style.backgroundColor = "blue";
+                    texto.innerText = 'Azul'
+                    break;
+
+                case "Laranja":
+                    body.style.backgroundColor = "orange";
+                    texto.innerText = 'Laranja'
+                    break;
+
+            }
+        });
+    </script> -->
+    <script>
+        function Consultar(){
+            var Nota = document.getElementById('Nota').value
+            var Presenca = document.getElementById('Presenca').value
+            var Resultado = document.getElementById('Resultado')
+
+
+            var Fmaxima = 40
+            var Nmaxima = 10
+            var Pmaxima = 10
+            
+
+            if(Nota == '' && Presenca == ''){
+                alert('Informe os parametros')
+            }
+            else if(Nota > Nmaxima && Nota < 0 && Presenca > Pmaxima && Presenca < 0){
+                alert('Valores excedidos, verifique');
+            }
+            else if(Nota >= 6 && Presenca >= Fmaxima){
+                Resultado.innerText = "Aprovado"
+                Resultado.style.color = "green"
+            }
+            else if(Nota < 6 && Presenca == Fmaxima){
+                Resultado.innerText = "Recuperação"
+                Resultado.style.color = "orange"
+            }
+            else{
+                Resultado.innerText = "Reprovado"
+                Resultado.style.color = "red"
+            }
+        }
+    </script>
+</body>
+
+</html>
