@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações 1</title>
+    <style>
+        @keyframes animacao {
+            0% {
+                left: 45vw;
+                top: 50vw;
+            }
+
+            25% {
+                left: 45vw;
+                top: 40vw;
+            }
+
+            50% {
+                left: 55vw;
+                top: 40vw;
+            }
+
+            75% {
+                left: 55vw;
+                top: 50vw;
+            }
+            100% {
+                left: 45vw;
+                top: 50vw;
+                background-color: blue;
+            }
+        }
+
+        @keyframes animacao2 {
+            0% {
+                left: 55vw;
+                top: 50vw;
+            }
+
+            25% {
+                left: 45vw;
+                top: 50vw;
+            }
+
+            50% {
+                left: 45vw;
+                top: 40vw;
+            }
+
+            75% {
+                left: 55vw;
+                top: 40vw;
+            }
+
+            100%{
+                left: 55vw;
+                top: 50vw;
+                background-color: red;
+            }
+        }
+
+        .teste {
+            width: 5vw;
+            height: 5vw;
+            left: 45vw;
+            top: 50vw;
+            position: absolute;
+            background-color: red;
+            animation-name: animacao;
+            /* animation-duration: 6s; */
+            /* animation-delay: 1; */
+            /* animation-timing-function: ease; */
+            animation-iteration-count: infinite;
+            
+            animation-duration: 10s;
+            border-radius: 50%;
+            animation-fill-mode: backwards;
+        }
+
+        .teste2 {
+            border-radius: 50%;
+            left: 55vw;
+            top: 50vw;
+            position: absolute;
+            background-color: blue;
+            width: 5vw;
+            height: 5vw;
+            animation-name: animacao2;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="teste">
+
+    </div>
+
+    <div class="teste2">
+
+    </div>
+</body>
+
+</html>
