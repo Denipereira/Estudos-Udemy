@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo Escopos</title>
+</head>
+<body>
+    
+    <script>
+
+    //Variaveis declaradas no escompo global, pode ser lidar em qualquer parte do script.
+    //Variaveis declaradas no escopo de bloco
+
+    //Global, todos tem acesso as variaveis (depois quer ela foi declarada)
+    //Bloco (if, else, switch..), todos te acesso as variaveis "var", más não as do tipo "let" e "const"
+    //Funções, Variáveis declaradas dentro de uma função só são acessíveis dentro dela, mas a função sim tem acesso às variáveis globais (escopo externo).
+
+    var global = "sou de escopo Global"
+
+    if(true){
+        alert(global + " - Dentro de um bloco");
+        var escopo =  "sou de escopo bloco"
+        let escopolet = "sou de escopo bloco, porém Let"
+        document.write(escopolet)
+    }
+
+    function mostrarEscopo(){
+        alert(global + " - Dentro de uma função")
+        alert(escopo + " - Dentro de uma função")
+        alert(escopolet + " - Dentro de uma função")
+    }
+    mostrarEscopo();
+
+    </script>
+</body>
+</html>
