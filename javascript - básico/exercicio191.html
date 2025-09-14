@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Aula - 191</title>
+</head>
+
+<body>
+    <label for="">Digite o primeiro valor</label><input type="number" name="" id="n1" placeholder="Valor">
+    <label for="">Digite o segundo valor</label><input type="number" name="" id="n2" placeholder="Valor">
+    <label for="">Digite a operação desejada</label><input type="text" name="" id="operacao">
+    <button onclick="calcular()">Calcular</button>
+    <h1 id="Resultado">Resultado...</h1>
+    <script>
+        function calcular() {
+            var n1 = parseInt(document.getElementById('n1').value);
+            var n2 = parseInt(document.getElementById('n2').value);
+            var operacao = document.getElementById('operacao').value
+            var resultado = document.getElementById('Resultado')
+
+            if (operacao === 'soma') {
+                result = n1 + n2
+            } else if (operacao === 'subtração') {
+                result = n1 - n2
+            } else if (operacao === 'multiplicação') {
+                result = n1 * n2
+            } else if (operacao === "divisão") {
+                result = n1 / n2
+            }
+            resultado.innerHTML = ('o resultado da operação é ' + result);
+        }
+        
+    </script>
+</body>
+
+</html>

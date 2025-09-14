@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de Strings</title>
+</head>
+
+<body>
+
+    <script>
+        var data = new Date()
+        // document.write(data.getFullYear() + '/' + (data.getMonth() + 1) + '/' + data.getDate() + '<br>'
+        //     + data.getHours() + ':' + data.getMinutes())
+        
+        var data1 = new Date(2025, 9, 7);
+        var data2 = new Date(2005, 9, 7);
+
+        var diferenca = data1.getTime() -  data2.getTime()
+        var result = diferenca / 86400000
+
+        document.write(diferenca + '<br>')
+        document.write(`A diferença de ${data1} e ${data2} é: ${result}`)
+    </script>
+</body>
+
+</html>
