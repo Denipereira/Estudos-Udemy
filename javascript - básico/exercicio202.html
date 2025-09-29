@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Auala 202</title>
+</head>
+
+<body>
+    <input type="text" id="campo" placeholder="Digite aqui" onfocus="verirficaValores()">
+
+    <script>
+        function verirficaValores() {
+            var input = document.getElementById('campo');
+            var estado = input.value;
+            
+            if (estado === '') {
+                input.style.background = "yellow";
+            } else if (estado.length <= 3) {
+                input.style.background = 'red';
+            } else if (estado.length > 3) {
+                input.style.background = 'green';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

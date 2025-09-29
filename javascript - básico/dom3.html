@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando atributos com JS</title>
+</head>
+<body>
+    <button id="vermelho" onclick="alterar('red', '20vw', '5vh')">Vermelho</button>
+    <button id="Laranja" onclick="alterar('orange', '35vw', '15vh')">Laranja</button>
+    <button id="Azul" onclick="alterar('blue', '50vw', '45vh')">Azul</button>
+    <hr>
+    <div id="bloco" style="width: 10vw; height: 10vw; border: 0.15vw solid black; border-radius: 1vw;"></div>
+    <script>
+        function alterar(cor, l, a){
+            var bloco = document.getElementById('bloco');
+            bloco.style.background = cor
+            bloco.style.width = l;
+            bloco.style.height = a;
+
+        }
+    </script>
+</body>
+</html>

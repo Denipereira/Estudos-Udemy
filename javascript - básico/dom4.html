@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicando Classes</title>
+    <style>
+        .classe1{
+            background-color: black;
+            padding: 1vw;
+            font-size: 1vw;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        .classe4{
+            background-color: orange;
+            padding: 1vw;
+            font-size: 1vw;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: black;
+        }
+        .classe3{
+            background-color: green;
+            padding: 1vw;
+            font-size: 1vw;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="item">Texto a ser alterado via JS</h1>
+    <hr>
+    <button id="Mudar" onclick="mudarClasse()">Clique para mudar a classe</button>
+</body>
+<script>
+    function mudarClasse(){
+        var item = document.getElementById('item');
+
+        item.className = 'classe3'
+    }
+</script>
+</html>
